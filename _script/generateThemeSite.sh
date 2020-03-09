@@ -63,7 +63,7 @@ if $hugoMaster; then
 	export GO111MODULE=on
 	export GOBIN=${themesDir}/bin
 	export PATH=${themesDir}/bin:$PATH
-	go get -tags extended github.com/gohugoio/hugo@master
+	go get github.com/gohugoio/hugo@master
 	hugo version
 fi
 
