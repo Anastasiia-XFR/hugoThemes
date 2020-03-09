@@ -284,7 +284,7 @@ for x in `find ${themesDir} -mindepth 1 -maxdepth 1 -type d -not -path "*.git" -
 					echo "Example site for theme ${x} missing /content folder"
 					generateDemo=false
 				fi
-            	HUGO_THEME=${x} hugo --quiet -s exampleSite2 -d ${demoDestination} -b $BASEURL/theme/$x/
+            	HUGO_THEME=${x} hugo -s exampleSite2 -d ${demoDestination} -b $BASEURL/theme/$x/
             else
                                 grep -v "enableEmoji" ${searchConfig} > temp && mv temp ${searchConfig}
                                 find ${themesDir}/$x/layouts/ -type f -exec sed -i -e 's/Pages "Type" "posts"/Pages "Type" "post"/g' -e 's/Pages "Section" "posts"/Pages "Section" "post"/g' {} \;
